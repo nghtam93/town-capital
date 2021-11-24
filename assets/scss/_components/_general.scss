@@ -28,7 +28,24 @@
 
 }
 
+/*Effect*/
 
+@keyframes float10{
+    0%{transform:translatey(0px);}
+    50%{transform:translatey(-10px);}
+    100%{transform:translatey(0px);}
+}
+
+@keyframes spinner-rotate{
+    to{transform:rotate(360deg);}
+}
+/**/
+.row-7{
+    --bs-gutter-x: 8px;
+    &>*{
+        width: calc(100% / 7);
+    }
+}
 /*Page 404*/
 .error404{
    .error-404{

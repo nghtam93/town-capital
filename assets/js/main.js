@@ -34,19 +34,19 @@ $(document).ready(function(){
 
         new WOW().init();
 
-        $('.js-intro-slider-for').slick({
-          slidesToShow: 1,
+        $('.js-intro-slider-nav').slick({
+          slidesToShow: 4,
           slidesToScroll: 1,
           arrows: false,
           fade: false,
-          asNavFor: '.js-intro-slider-nav'
+          asNavFor: '.js-intro-slider-for'
         });
-        $('.js-intro-slider-nav').slick({
-          autoplay: true,
-          autoplaySpeed: 5000,
+        $('.js-intro-slider-for').slick({
+          // autoplay: true,
+          // autoplaySpeed: 5000,
           slidesToShow: 1,
           slidesToScroll: 1,
-          asNavFor: '.js-intro-slider-for',
+          asNavFor: '.js-intro-slider-nav',
           fade: true,
           arrows: false,
           dots: true,

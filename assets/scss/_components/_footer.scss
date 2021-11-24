@@ -1,0 +1,31 @@
+.footer{
+	padding: 50px 0 15px;
+	color: #EEEEEE;
+	background: linear-gradient(180deg, #26134F 0%, #130630 100%);
+
+	&__socical{
+		display: flex;
+		justify-content: center;
+		line-height: 0;
+		li{
+			position: relative;
+			transition: all .5s;
+			&:not(:last-child){
+				margin-right: 16px;
+			}
+			img{
+				width: 40px;
+				height: 40px;
+			}
+			&:hover{
+				transform: translateY(-5px);
+			}
+		}
+	}
+}
+.copyright{
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 12px;
+	border-top: 1px solid rgba(255, 255, 255, .1);
+}
