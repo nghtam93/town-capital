@@ -1,0 +1,50 @@
+.header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-width:100%;
+	padding: 24px 0;
+	z-index: 10;
+	&.is-active{
+		background: #171C20;
+	}
+	.container{
+		max-width: 1800px;
+	}
+	.logo{
+		width: 240px;
+		margin-bottom: 0;
+		transition: opacity .5s;
+		img{
+			width: auto;
+			max-height: 50px;
+		}
+	}
+	.main__nav{
+		flex-grow: 1;
+		text-align: center;
+	}
+	&__right{
+		width: 240px;
+	}
+
+
+	@media (max-width: 991px){
+
+		.logo {
+		    flex-grow: 1;
+		    text-align: center;
+		    img{
+		    	max-height: 40px;
+		    }
+		}
+	}
+	@media (max-width: 575px){
+
+	}
+}
+@keyframes stuckMoveDown{
+    0%{transform:translateY(-100%)}
+    100%{transform:translateY(0)}
+}
