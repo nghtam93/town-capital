@@ -35,11 +35,16 @@ $(document).ready(function(){
         new WOW().init();
 
         $('.js-intro-slider-nav').slick({
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          arrows: false,
-          fade: false,
-          asNavFor: '.js-intro-slider-for'
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            arrows: true,
+            fade: false,
+            asNavFor: '.js-intro-slider-for',
+            vertical: true,
+            verticalSwiping: true,
+            focusOnSelect: true,
+            prevArrow: '<span class="icon-arrow-top slick-prev slick-arrow"></span>',
+            nextArrow: '<span class="icon-arrow-bottom slick-next slick-arrow"></span>',
         });
         $('.js-intro-slider-for').slick({
           // autoplay: true,
@@ -49,8 +54,32 @@ $(document).ready(function(){
           asNavFor: '.js-intro-slider-nav',
           fade: true,
           arrows: false,
-          dots: true,
+          dots: false,
         });
+
+
+
+        var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"
+
+        var $counters = $(".counter");
+
+        /* Start counting, do this on DOM ready or with Waypoints. */
+        $counters.each(function (ignore, counter) {
+            var waypoint = new Waypoint( {
+                element: $(this),
+                handler: function() {
+                    counterUp(counter, {
+                        duration: 3000,
+                        delay: 10
+                    });
+                    this.destroy();
+                },
+                offset: 'bottom-in-view',
+            } );
+        });
+
+
+
     }
 
 });

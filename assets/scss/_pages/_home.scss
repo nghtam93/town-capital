@@ -85,8 +85,10 @@
                 border-radius: 15px;
                 padding: 24px 24px;
                 margin-bottom: 16px;
+                transition: all .5s;
                 &__thumb{
                     margin-bottom: 40px;
+                    transition: all .5s;
                 }
                 &__title{
                     font-weight: bold;
@@ -104,25 +106,80 @@
                     text-align: center;
                     color: #26104B;
                 }
+                &:hover{
+                    box-shadow: 0px 29px 30px rgba(0, 0, 0, .15);
+                    .el__item__thumb{
+                        transform: translateY(-5px);
+                    }
+                }
             }
         }
 
         .-icon-user{
             position: absolute;
             top: 0;
-            left: 0;
-            width: 400px;
-            height: 400px;
+            left: 3%;
+            width: 24%;
+            height: 107%;
             background-image: url(../img/home-functions-ic.png);
             background-repeat: no-repeat;
             background-size: contain;
             z-index: -1;
             pointer-events: none;
+            animation: float10 6s infinite linear;
+        }
+        .-icon-stone1{
+            position: absolute;
+            top: 75%;
+            right: 14%;
+            width: 150px;
+            height: 150px;
+            background-image: url(../img/ic-stone1.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+            pointer-events: none;
+            animation: spinner-rotate 6s infinite linear;
+        }
+        .-icon-stone2{
+            position: absolute;
+            top: 40%;
+            right: 0;
+            width: 10%;
+            height: 24%;
+            background-image: url(../img/ic-stone2.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+            pointer-events: none;
+            animation: float20 6s infinite linear;
         }
     }
     &-team{
         position: relative;
         padding: 100px 0 60px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 38%;
+            right: 0;
+            width: 26%;
+            height: 59%;
+            background-image: url(../img/home-team-ic.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .container{
+            max-width: 1374px;
+        }
+        .col__left{
+            width: calc(100% - 115px);
+        }
+        .col__right{
+            width: 115px;
+        }
         .el{
             &__box{
                 padding: 80px 170px;
@@ -136,9 +193,10 @@
 
         }
         .slider__item{
-            padding: 50px;
+            padding: 50px 0 50px 50px;
             &__thumb{
                 position: relative;
+                max-width: 220px;
                 &:before{
                     content: "";
                     position: absolute;
@@ -180,21 +238,28 @@
                 color: #26104B;
             }
         }
+        .slider-nav{
+            padding: 40px 10px;
+        }
         .slider__item2{
-            margin-bottom: 10px;
+            width: 60px;
+            border-radius: 50%;
+            margin: 8px auto 8px;
+            cursor: pointer;
+            border: 2px solid #FFFFFF;
+            transition: all .5s;
             .dnfix__thumb{
                 width: 56px;
                 padding-top: 56px;
-                border: 1px solid #FFFFFF;
-                border-radius: 50%;
-                img{
-                    border-radius: 50%;
-                }
+            }
+            &:hover{
+               border-color: #F528A3;
             }
         }
-        .slick-active{
-            .dnfix__thumb{
-                box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.35);
+        .slick-current{
+            .slider__item2{
+                border-color: #F528A3;
+                box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.35);
             }
         }
 
@@ -227,8 +292,36 @@
             background-position: bottom;
             z-index: -1;
         }
+        .el__boxs{
+            position: relative;
+        }
+        .el__header{
+            position: absolute;
+            left: 45px;
+            bottom: -110px;
+            &__title{
+                font-weight: bold;
+                font-size: 42px;
+                line-height: 50px;
+                text-transform: uppercase;
+                color: #473B59;
+            }
+            &__sub{
+                font-weight: 200;
+                font-size: 180px;
+                line-height: 211px;
+                text-transform: uppercase;
+                color: #EC3984;
+            }
+        }
+        .col__title{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
         .el{
             &__item{
+
                 margin-bottom: calc( var(--bs-gutter-x) / 2);
                 .dnfix__thumb{
                     padding-top: 70px;
@@ -236,11 +329,57 @@
                 img{
                     border-radius: 4px;
                 }
+                &__title {
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 29px;
+                    text-transform: uppercase;
+                    color: #473B59;
+                }
             }
         }
     }
     &-portfolio{
+        position: relative;
         padding: 100px 0 50px;
+        .row-7 {
+            --bs-gutter-x: 20px;
+        }
+        .el{
+            &__item{
+                margin-bottom: calc( var(--bs-gutter-x) / 2);
+
+                .dnfix__thumb{
+                    padding-top: 39%;
+                }
+            }
+        }
+        .-icon-stone1{
+            position: absolute;
+            top: 8%;
+            left: 3%;
+            width: 150px;
+            height: 150px;
+            background-image: url(../img/ic-stone3.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+            pointer-events: none;
+            animation: spinner-rotate 6s infinite linear;
+        }
+        .-icon-stone2{
+            position: absolute;
+            top: 40%;
+            right: 2%;
+            width: 12%;
+            height: 29%;
+            background-image: url(../img/ic-stone4.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+            pointer-events: none;
+            animation: float20 6s infinite linear;
+        }
     }
     &-news{
         padding: 50px 0 85px
