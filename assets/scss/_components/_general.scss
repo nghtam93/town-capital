@@ -5,6 +5,7 @@
     position: absolute;
     top: 0;
     z-index: 1;
+    pointer-events: none;
 }
 .frame--cloubd {
     position: absolute;
@@ -22,8 +23,8 @@
     background: url(../img/cloud_one.png);
     position: absolute;
     left: 10%;
-    bottom: 0;
-    height: 55%;
+    top: 0;
+    height: 62%;
     width: 700%;
     -webkit-animation: cloud_one 400s linear infinite;
     -moz-animation: cloud_one 400s linear infinite;
