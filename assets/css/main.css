@@ -635,10 +635,11 @@ br.tb {
   background: url(../img/cloud_one.png);
   background-repeat-y: no-repeat;
   background-position: top left;
+  background-size: contain;
   position: absolute;
   left: 10%;
   top: 0;
-  height: 500px;
+  height: 62%;
   width: 700%;
   -webkit-animation: cloud_one 400s linear infinite;
   -moz-animation: cloud_one 400s linear infinite;
