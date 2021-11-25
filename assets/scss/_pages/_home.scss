@@ -469,9 +469,17 @@
                 padding: 80px 80px 40px;
             }
         }
-        &-partners::before{
-            display: none;
+        &-partners{
+            ::before{
+                display: none;
+            }
+            &:after {
+                width: 100%;
+                height: 165%;
+            }
         }
+
+
     }
     @media (max-width: 1199px){
         &-banner {
@@ -653,7 +661,9 @@
         }
     }
     @media (max-width: 575px){
-
+        &-number {
+            padding: 40px 0 0;
+        }
         &-banner{
             min-height: 740px;
             .el__meta {
@@ -676,6 +686,9 @@
 
         &-partners {
             padding: 0;
+            &:after{
+                display: none;
+            }
             .row-7 {
                 > * {
                     width: calc(100% / 2);
@@ -691,7 +704,8 @@
                 line-height: 22px;
             }
         }
-        .home-portfolio{
+        &-portfolio{
+            padding: 80px 0 0;
             .row-7 > * {
                 width: calc(100% / 2);
             }
@@ -723,7 +737,7 @@
             }
         }
         &-news{
-            padding: 50px 0 30px;
+            padding: 80px 0 30px;
         }
 
     }
