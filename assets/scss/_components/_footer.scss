@@ -1,31 +1,134 @@
 .footer{
-	padding: 50px 0 15px;
-	color: #EEEEEE;
+	padding: 80px 0 15px;
+	color: rgba(238, 238, 238, .5);
 	background: linear-gradient(180deg, #26134F 0%, #130630 100%);
-
+	a{
+		color: rgba(238, 238, 238, .5);
+		transition: all .5s;
+		&:hover{
+			color: #fff;
+		}
+	}
+	&__item{
+		margin-bottom: 30px;
+		&__title{
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 19px;
+			color: #EEEEEE;
+			margin-bottom: 20px;
+		}
+	}
+	&__logo{
+		margin-top: -30px;
+		margin-bottom: 15px;
+	}
+	&__address{
+		li{
+			margin-bottom: 10px;
+		}
+		[class^="icon-"]{
+			display: inline-block;
+			width: 25px;
+			color: #E61B70;
+		}
+	}
+	&__nav{
+		display: flex;
+		flex-wrap: wrap;
+		>li{
+			flex: 0 0 auto;
+			width: 50%;
+			margin-bottom: 10px;
+		}
+	}
 	&__socical{
 		display: flex;
 		justify-content: center;
-		line-height: 0;
+		align-items:center;
+		margin-top: 4px;
 		li{
 			position: relative;
+			width: 25px;
 			transition: all .5s;
 			&:not(:last-child){
 				margin-right: 16px;
 			}
 			img{
-				width: 40px;
-				height: 40px;
+
 			}
 			&:hover{
 				transform: translateY(-5px);
 			}
 		}
 	}
+	.-newsletter{
+		form{
+			position: relative;
+			margin-bottom: 10px;
+		}
+		.text-field{
+			font-size: 14px;
+			padding:18px 25px;
+			border: 0;
+			background: rgba(255, 255, 255, .1);
+			border-radius: 37px;
+		}
+		.submit-field {
+			position: absolute;
+			top: 0;
+			right: 0;
+		    background: #E61B70;
+		    border-radius: 37px;
+		    color: #fff;
+		    border: 0;
+		    font-weight: bold;
+		    font-size: 14px;
+		    line-height: 19px;
+		    padding: 19px 30px;
+		    transition: all .5s;
+		    &:hover{
+		    	background-color: #6e5fda;
+		    }
+		}
+		i{
+			font-style: italic;
+			font-weight: normal;
+			font-size: 11px;
+			line-height: 15px;
+			color: #EEEEEE;
+			opacity: 0.5;
+		}
+	}
+
+	@media (max-width: 991px){
+		.-newsletter{
+			text-align: center;
+			form {
+			    position: relative;
+			    margin-bottom: 10px;
+			    max-width: 500px;
+			    margin: 0 auto 10px;
+			}
+		}
+	}
+	@media (max-width: 575px){
+		.-newsletter {
+		    text-align: left;
+		}
+	}
 }
+
 .copyright{
 	display: flex;
 	flex-wrap: wrap;
 	padding-top: 12px;
+	font-weight: 200;
+	font-size: 14px;
+	line-height: 22px;
 	border-top: 1px solid rgba(255, 255, 255, .1);
+	@media (max-width: 575px){
+	    text-align: center;
+	    justify-content: center;
+	}
 }

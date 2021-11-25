@@ -41,7 +41,7 @@
 .slick-list{margin:0 -10px;}
 
 /*.slick-vertical */
-.slick-vertical .slick-arrow{font-size:16px;color:#26104B;transition:all .5s;}
+.slick-arrow{font-size:16px;color:#26104B;transition:all .5s;}
 
 .slick-vertical .slick-next{top:auto;bottom:0px;left:0;right:0;text-align:center;}
 .slick-vertical .slick-next:hover{transform: translateY(-5px);}

@@ -77,7 +77,9 @@ strong{
         max-width: 1224px;
     }
 }
-
+.wrapper{
+    overflow: hidden;
+}
 /* Slider */
 
 .slickfix .slick-list{margin:0 -50px;}
@@ -150,7 +152,7 @@ br{
         bottom: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(101.72deg, #9b8edf 6.16%, #9c79dd 95.73%);
+        background: linear-gradient(101.72deg, #a11b25 6.16%, #ff928c 95.73%);
         border-radius: inherit;
         opacity: 0;
         transition: all .5s;
@@ -188,7 +190,9 @@ br{
 
 }
 
-@media (min-width: 992px){
-
+@media (max-width: 991px){
+    .container {
+        max-width: 100%!important;
+    }
 }
 

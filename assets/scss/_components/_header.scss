@@ -7,7 +7,8 @@
 	padding: 24px 0;
 	z-index: 10;
 	&.is-active{
-		background: #171C20;
+		background: rgba(95, 79, 215, .9);
+    	backdrop-filter: blur(2px);
 	}
 	.container{
 		max-width: 1800px;
@@ -29,15 +30,29 @@
 		width: 240px;
 		text-align: right;
 	}
-
-
+	@media (max-width: 1199px){
+		padding: 20px 0;
+	}
+	@media (max-width: 1099px){
+		.logo {
+		    width: auto;
+		}
+		.main__nav {
+		    text-align: right;
+		}
+		&__right {
+		    width: auto;
+		}
+	}
 	@media (max-width: 991px){
-
+		padding: 16px 0;
+		&__right{
+			display: none;
+		}
 		.logo {
 		    flex-grow: 1;
-		    text-align: center;
 		    img{
-		    	max-height: 40px;
+		    	max-height: 25px;
 		    }
 		}
 	}
