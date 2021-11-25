@@ -33,8 +33,6 @@ $(document).ready(function(){
         $(this).closest('li').addClass('active')
 
         //Close menu mb
-        // $('.menu-mb__btn').removeClass('active')
-
         if($('.nav__mobile').hasClass('active')){
             $('.nav__mobile').removeClass('active')
         }
@@ -121,8 +119,6 @@ $(document).ready(function(){
                 offset: 'bottom-in-view',
             } );
         });
-
-
 
     }
 
